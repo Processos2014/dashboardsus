@@ -1,2 +1,2 @@
-dashboard-sus
+# Dashboard SUS
 =============
