@@ -61,8 +61,8 @@ class ConsultasMedicas(models.Model):
 
     class Meta:
         unique_together = ('mes', 'ano',)
-        verbose_name = _('Consultas Medicas')
-        verbose_name_plural = _('Consultas Medicas')
+        verbose_name = _(u'Consultas Médicas')
+        verbose_name_plural = _(u'Consultas Médicas')
 
     def __unicode__(self):
         return u'%s contact' % (self.type.capitalize())
