@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'grappelli.dashboard',
     'grappelli',
     'redactor',
-    
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,11 +82,11 @@ WSGI_APPLICATION = '%s.wsgi.application' % PROJECT_NAME
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME': '%s_db' % PROJECT_NAME,                              
+        'NAME': '%s_db' % PROJECT_NAME,
         'USER': '%s_admin' % PROJECT_NAME,
         'PASSWORD': 'q1IUilS14,747Qx',
-        'HOST': 'localhost',                                
-        'PORT': '',    
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -162,7 +162,7 @@ MEDIA_VIDEO_LIBRARY_ROOT = os.path.join(MEDIA_ROOT, 'video_library')
 
 # Admin tittle
 
-GRAPPELLI_ADMIN_TITLE = u'Agência dashboardsus - Comunicação experimental multimídia'
+GRAPPELLI_ADMIN_TITLE = u'Dashboard SUS'
 
 
 # Dashboard
@@ -172,7 +172,7 @@ GRAPPELLI_INDEX_DASHBOARD = 'dashboardsus.dashboard.CustomIndexDashboard'
 
 # Redactor config
 
-REDACTOR_OPTIONS = {'lang': 'en'} 
+REDACTOR_OPTIONS = {'lang': 'en'}
 REDACTOR_UPLOAD = os.path.join(MEDIA_ROOT, 'upload')
 
 
