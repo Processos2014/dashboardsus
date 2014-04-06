@@ -65,4 +65,4 @@ class ConsultasMedicas(models.Model):
         verbose_name_plural = _(u'Consultas Médicas')
 
     def __unicode__(self):
-        return u'%s contact' % (self.type.capitalize())
+        return u'Área %s  (%s/%s)' % ('TEMP', self.mes, self.ano)
