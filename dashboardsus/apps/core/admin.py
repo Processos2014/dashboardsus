@@ -51,3 +51,62 @@ class ConsultasMedicasAdmin(admin.ModelAdmin):
     ordering = ('mes', 'ano',)
 
 admin.site.register(ConsultasMedicas, ConsultasMedicasAdmin)
+
+class PacientesAdmin(admin.ModelAdmin):
+    model = Pacientes
+    classes = ('grp-collapse grp-open',)
+    inline_classes = ('grp-collapse grp-open',)
+    fieldsets = (
+        (
+            _(u'Informacões do cabeçalho'), {
+                'fields' : (
+                    ('mes', 'ano',),
+                )
+            }
+        ),
+        (
+            _(u'Masculino'), {
+                'fields' : (
+                    'masculino_menor_que_um',
+                    'masculino_um_a_quatro',
+                    'masculino_cinco_a_seis',
+                    'masculino_sete_a_nove',
+                    'masculino_dez_a_quatorze',
+                    'masculino_quinze_a_dezenove',
+                    'masculino_vinte_a_trinta_e_nove',
+                    'masculino_quarenta_a_quarenta_e_nove',
+                    'masculino_cinquenta_a_cinquenta_e_nove',
+                    'masculino_maior_que_sessenta',
+                )
+            }
+        ),
+                (
+            _(u'Feminino'), {
+                'fields' : (
+                    'feminino_menor_que_um',
+                    'feminino_um_a_quatro',
+                    'feminino_cinco_a_seis',
+                    'feminino_sete_a_nove',
+                    'feminino_dez_a_quatorze',
+                    'feminino_quinze_a_dezenove',
+                    'feminino_vinte_a_trinta_e_nove',
+                    'feminino_quarenta_a_quarenta_e_nove',
+                    'feminino_cinquenta_a_cinquenta_e_nove',
+                    'feminino_maior_que_sessenta',
+                )
+            }
+        ),
+        (
+            _(u'Famílias cadastradas'), {
+                'fields' : (
+                    'familias_cadastradas',
+                )
+            }
+        ),
+    )
+    list_display = ('mes', 'ano')
+    list_filter = ('mes',)
+    search_fields = ('mes',)
+    ordering = ('mes', 'ano',)
+
+admin.site.register(Pacientes, PacientesAdmin)

@@ -42,6 +42,7 @@ ANOS = (
     ('2020', '2020'),
 )
 
+
 class ConsultasMedicas(models.Model):
     # area = models.ForeignKey(Area, verbose_name=_('Área'))
     mes = models.CharField(_(u'Mês'), choices=MESES, max_length=2)
@@ -63,6 +64,43 @@ class ConsultasMedicas(models.Model):
         unique_together = ('mes', 'ano',)
         verbose_name = _(u'Consultas Médicas')
         verbose_name_plural = _(u'Consultas Médicas')
+
+    def __unicode__(self):
+        return u'Área %s  (%s/%s)' % ('TEMP', self.mes, self.ano)
+
+class Pacientes(models.Model):
+    # area = models.ForeignKey(Area, verbose_name=_('Área'))
+    mes = models.CharField(_(u'Mês'), choices=MESES, max_length=2)
+    ano = models.CharField(_('Ano'), choices=ANOS,max_length=4)
+
+    masculino_menor_que_um = models.CharField(_('< 1'), max_length=16)
+    masculino_um_a_quatro = models.CharField(_('1 - 4'), max_length=32)
+    masculino_cinco_a_seis = models.CharField(_('5 - 6'), max_length=32)
+    masculino_sete_a_nove = models.CharField(_('7 - 8'), max_length=32)
+    masculino_dez_a_quatorze = models.CharField(_('10 - 14'), max_length=32)
+    masculino_quinze_a_dezenove = models.CharField(_('15 - 19'), max_length=32)
+    masculino_vinte_a_trinta_e_nove = models.CharField(_('20 - 39'), max_length=32)
+    masculino_quarenta_a_quarenta_e_nove = models.CharField(_('40 - 49'), max_length=32)
+    masculino_cinquenta_a_cinquenta_e_nove = models.CharField(_('50 - 59'), max_length=32)
+    masculino_maior_que_sessenta = models.CharField(_('> 60'), max_length=32)
+
+    feminino_menor_que_um = models.CharField(_('< 1'), max_length=16)
+    feminino_um_a_quatro = models.CharField(_('1 - 4'), max_length=32)
+    feminino_cinco_a_seis = models.CharField(_('5 - 6'), max_length=32)
+    feminino_sete_a_nove = models.CharField(_('7 - 9'), max_length=32)
+    feminino_dez_a_quatorze = models.CharField(_('10 - 14'), max_length=32)
+    feminino_quinze_a_dezenove = models.CharField(_('15 - 19'), max_length=32)
+    feminino_vinte_a_trinta_e_nove = models.CharField(_('20 - 39'), max_length=32)
+    feminino_quarenta_a_quarenta_e_nove = models.CharField(_('40 - 49'), max_length=32)
+    feminino_cinquenta_a_cinquenta_e_nove = models.CharField(_('50 - 59'), max_length=32)
+    feminino_maior_que_sessenta = models.CharField(_('> 60'), max_length=32)
+
+    familias_cadastradas = models.CharField(_(' '), max_length=16)
+
+    class Meta:
+        unique_together = ('mes', 'ano',)
+        verbose_name = _(u'Pacientes')
+        verbose_name_plural = _(u'Pacientes')
 
     def __unicode__(self):
         return u'Área %s  (%s/%s)' % ('TEMP', self.mes, self.ano)
