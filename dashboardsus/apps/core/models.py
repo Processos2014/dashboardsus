@@ -41,10 +41,87 @@ ANOS = (
     ('2019', '2019'),
     ('2020', '2020'),
 )
+ESTADOS = (
+    ("AC", "AC"),
+    ("AL", "AL"),
+    ("AP", "AP"),
+    ("AP", "AP"),
+    ("BA", "BA"),
+    ("CE", "CE"),
+    ("DF", "DF"),
+    ("GO", "GO"),
+    ("ES", "ES"),
+    ("MA", "MA"),
+    ("MT", "MT"),
+    ("MS", "MS"),
+    ("MG", "MG"),
+    ("PA", "PA"),
+    ("PB", "PB"),
+    ("PR", "PR"),
+    ("PE", "PE"),
+    ("PI", "PI"),
+    ("RJ", "RJ"),
+    ("RN", "RN"),
+    ("RS", "RS"),
+    ("RO", "RO"),
+    ("RR", "RR"),
+    ("SP", "SP"),
+    ("SC", "SC"),
+    ("SE", "SE"),
+    ("TO", "TO"),
+)
 
+class string_with_title(str):
+    def __new__(cls, value, title):
+        instance = str.__new__(cls, value)
+        instance._title = title
+        return instance
+
+    def title(self):
+        return self._title
+
+    __copy__ = lambda self: self
+    __deepcopy__ = lambda self, memodict: self
+
+class Municipio(models.Model):
+    codigo = models.CharField(_(u'Código'), max_length=64)
+    nome = models.CharField(_(u'Nome'), max_length=64)
+    estado = models.CharField(_(u'Estado'), max_length=2, choices=ESTADOS)
+
+    class Meta:
+        verbose_name = u'Município'
+        verbose_name_plural = u'Municípios'
+        app_label = string_with_title('core', u' ')
+
+    def __unicode__(self):
+        return '%s' % (self.nome)
+
+class Unidade(models.Model):
+    codigo = models.CharField(_(u'Código'), max_length=64)
+    municipio = models.ForeignKey(Municipio, verbose_name=_(u'Município'))
+
+    class Meta:
+        verbose_name = _(u'Unidade')
+        verbose_name_plural = _(u'Unidades')
+        app_label = string_with_title('core', u' ')
+
+    def __unicode__(self):
+        return '%s' % (self.codigo)
+
+class Area(models.Model):
+    codigo = models.CharField(max_length=64)
+    unidade = models.ForeignKey(Unidade, verbose_name=_(u'Unidade'))
+
+    class Meta:
+        verbose_name = _(u'Área')
+        verbose_name_plural = _(u'Áreas')
+        app_label = string_with_title('core', u' ')
+
+    def __unicode__(self):
+        return u'Município %s - Unidade %s - Área %s' % (self.unidade.municipio.nome, self.unidade.codigo, self.codigo)
 
 class ConsultasMedicas(models.Model):
-    # area = models.ForeignKey(Area, verbose_name=_('Área'))
+    area = models.ForeignKey(Area, verbose_name=_(u'Área'))
     mes = models.CharField(_(u'Mês'), choices=MESES, max_length=2)
     ano = models.CharField(_('Ano'), choices=ANOS,max_length=4)
 
@@ -61,15 +138,16 @@ class ConsultasMedicas(models.Model):
     maior_que_sessenta = models.CharField(_('> 60'), max_length=32)
 
     class Meta:
-        unique_together = ('mes', 'ano',)
+        unique_together = ('area', 'mes', 'ano',)
         verbose_name = _(u'Consultas Médicas')
         verbose_name_plural = _(u'Consultas Médicas')
+        app_label = string_with_title('core', u' ')
 
     def __unicode__(self):
-        return u'Área %s  (%s/%s)' % ('TEMP', self.mes, self.ano)
+        return u'Área %s (%s/%s)' % (self.area.codigo, self.mes, self.ano)
 
 class Pacientes(models.Model):
-    # area = models.ForeignKey(Area, verbose_name=_('Área'))
+    area = models.ForeignKey(Area, verbose_name=_(u'Área'))
     mes = models.CharField(_(u'Mês'), choices=MESES, max_length=2)
     ano = models.CharField(_('Ano'), choices=ANOS,max_length=4)
 
@@ -98,9 +176,10 @@ class Pacientes(models.Model):
     familias_cadastradas = models.CharField(_(' '), max_length=16)
 
     class Meta:
-        unique_together = ('mes', 'ano',)
+        unique_together = ('area', 'mes', 'ano',)
         verbose_name = _(u'Pacientes')
         verbose_name_plural = _(u'Pacientes')
+        app_label = string_with_title('core', u' ')
 
     def __unicode__(self):
-        return u'Área %s  (%s/%s)' % ('TEMP', self.mes, self.ano)
+        return u'Área %s  (%s/%s)' % (self.area.codigo, self.mes, self.ano)
