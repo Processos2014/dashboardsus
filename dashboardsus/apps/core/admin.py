@@ -10,6 +10,57 @@ from .forms import *
 
 admin.site.unregister(Group)
 
+class MunicipioAdmin(admin.ModelAdmin):
+   model = Municipio
+   classes = ('grp-collapse grp-open',)
+   inline_classes = ('grp-collapse grp-open',)
+   fieldsets = (
+       (
+           _(u'Município'), {
+               'fields' : (
+                   'codigo',
+                   'nome',
+               )
+           }
+       ),
+   )
+
+admin.site.register(Municipio, MunicipioAdmin)
+
+class UnidadeAdmin(admin.ModelAdmin):
+   model = Unidade
+   classes = ('grp-collapse grp-open',)
+   inline_classes = ('grp-collapse grp-open',)
+   fieldsets = (
+       (
+           _(u'Unidade'), {
+               'fields' : (
+                   'municipio',
+                   'codigo',
+               )
+           }
+       ),
+   )
+
+admin.site.register(Unidade, UnidadeAdmin)
+
+class AreaAdmin(admin.ModelAdmin):
+   model = Area
+   classes = ('grp-collapse grp-open',)
+   inline_classes = ('grp-collapse grp-open',)
+   fieldsets = (
+       (
+           _(u'Área'), {
+               'fields' : (
+                   'unidade',
+                   'codigo',
+               )
+           }
+       ),
+   )
+
+admin.site.register(Area, AreaAdmin)
+
 class ConsultasMedicasAdmin(admin.ModelAdmin):
     model = ConsultasMedicas
     classes = ('grp-collapse grp-open',)
@@ -18,7 +69,7 @@ class ConsultasMedicasAdmin(admin.ModelAdmin):
         (
             _(u'Informacões do cabeçalho'), {
                 'fields' : (
-                    ('mes', 'ano',),
+                    ('area', 'mes', 'ano',),
                 )
             }
         ),
@@ -45,10 +96,10 @@ class ConsultasMedicasAdmin(admin.ModelAdmin):
             }
         ),
     )
-    list_display = ('mes', 'ano')
-    list_filter = ('mes',)
-    search_fields = ('mes',)
-    ordering = ('mes', 'ano',)
+    list_display = ('area', 'ano', 'mes')
+    list_filter = ('area','mes', 'mes')
+    search_fields = ('area','mes', 'mes')
+    ordering = ('area', 'ano', 'mes',)
 
 admin.site.register(ConsultasMedicas, ConsultasMedicasAdmin)
 
@@ -60,7 +111,7 @@ class PacientesAdmin(admin.ModelAdmin):
         (
             _(u'Informacões do cabeçalho'), {
                 'fields' : (
-                    ('mes', 'ano',),
+                    ('area','mes', 'ano',),
                 )
             }
         ),
@@ -104,9 +155,9 @@ class PacientesAdmin(admin.ModelAdmin):
             }
         ),
     )
-    list_display = ('mes', 'ano')
-    list_filter = ('mes',)
-    search_fields = ('mes',)
-    ordering = ('mes', 'ano',)
+    list_display = ('area', 'ano', 'mes')
+    list_filter = ('area','mes', 'mes')
+    search_fields = ('area','mes', 'mes')
+    ordering = ('area', 'ano', 'mes',)
 
 admin.site.register(Pacientes, PacientesAdmin)
