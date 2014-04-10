@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import logging 
+import logging
 import json
 
 from django.contrib.auth import authenticate, login, logout
@@ -18,220 +18,221 @@ from django.views.generic import View
 logger = logging.getLogger(__name__)
 
 class GenericView(View):
-	'''
-	Generic view to render all system requests
-	'''
-	def render_to_json(request, template, context_data):
-		'''
-		Dumps json objects to string template
-		'''
-		response = {}	
+    '''
+    Generic view to render all system requests
+    '''
+    def render_to_json(request, template, context_data):
+        '''
+        Dumps json objects to string template
+        '''
+        response = {}
 
-		try: 
-			return context_data['file'] 
-		except:
-			pass
-		
-		try:
-			template_data = context_data['template']
-		except Exception, e:
-			template_data = None
+        try:
+            return context_data['file']
+        except:
+            pass
 
-		try:
-			leftover_data = context_data['leftover']
-		except:
-			leftover_data = None
+        try:
+            template_data = context_data['template']
+        except Exception, e:
+            template_data = None
 
-		try:
-			response['template'] = render_to_string(template, template_data, context_instance=RequestContext(request))
-		except Exception, e:
-			pass
-					
-		try:
-			for key, value in leftover_data.items():	
-				if key == 'redirect' and value == 'none':
-					response['template'] = None
-				else:
-					response[key] = value
-		except Exception, e:
-			pass
-			
-		try:
-			return HttpResponse(json.dumps(response), mimetype='application/json')
-		except Exception, e:
-			logger.error(str(e))
+        try:
+            leftover_data = context_data['leftover']
+        except:
+            leftover_data = None
 
-			return None
+        try:
+            response['template'] = render_to_string(template, template_data, context_instance=RequestContext(request))
+        except Exception, e:
+            pass
 
-	def load_json(request):
-		'''
-		Load json objects from request
-		'''
-		try:
-			response = json.loads(request)
-		except:
-			response = None
+        try:
+            for key, value in leftover_data.items():
+                if key == 'redirect' and value == 'none':
+                    response['template'] = None
+                else:
+                    response[key] = value
+        except Exception, e:
+            pass
 
-		return response
+        try:
+            return HttpResponse(json.dumps(response), mimetype='application/json')
+        except Exception, e:
+            logger.error(str(e))
 
-	def _request(self, request, *args, **kwargs):
+            return None
 
-		if request.is_ajax():
+    def load_json(request):
+        '''
+        Load json objects from request
+        '''
+        try:
+            response = json.loads(request)
+        except:
+            response = None
 
-			return render_to_json(request, self.get_template_name(request), self.get_context_data(request))
-		else:
-			context_data = self.get_context_data(request)
+        return response
 
-			try:
-				return context_data['file']
-			except:
-				pass
+    def _request(self, request, *args, **kwargs):
 
-			try:
-				template_data = context_data['template']
-			except Exception, e:
-				template_data = None						
+        if request.is_ajax():
 
-			try:
-				leftover_data = context_data['leftover']
-			except:
-				leftover_data = None
+            return render_to_json(request, self.get_template_name(request), self.get_context_data(request))
+        else:
+            context_data = self.get_context_data(request)
 
-			try:
-				for key, value in leftover_data.items():	
-					if key == 'redirect':
-						return HttpResponseRedirect(value)
-			except Exception, e:
-				pass
+            try:
+                return context_data['file']
+            except:
+                pass
 
-			return render_to_response(self.get_template_name(request), template_data, context_instance=RequestContext(request))
+            try:
+                template_data = context_data['template']
+            except Exception, e:
+                template_data = None
 
-	def post(self, request, *args, **kwargs):
+            try:
+                leftover_data = context_data['leftover']
+            except:
+                leftover_data = None
 
-		return self._request(request, args, kwargs)
-		
-	def get(self, request, *args, **kwargs):
+            try:
+                for key, value in leftover_data.items():
+                    if key == 'redirect':
+                        return HttpResponseRedirect(value)
+            except Exception, e:
+                pass
 
-		return self._request(request, args, kwargs)
+            return render_to_response(self.get_template_name(request), template_data, context_instance=RequestContext(request))
 
-	def get_context_data(self, request):
-		data = {}
+    def post(self, request, *args, **kwargs):
 
-		try:
-			slug = str(self.kwargs['slug'])
-		except Exception, e:
-			logger.error('Kwargs[slug] isn\'t defined! Raised: ' + str(e))
-		else:	
-			slug_method = getattr(self, slug)
-			data = slug_method(request)
-		finally:
-			return data
+        return self._request(request, args, kwargs)
 
-	def get_template_name(self, request):
-		page_name = request.resolver_match.url_name
-		app_name = request.resolver_match.app_name
+    def get(self, request, *args, **kwargs):
 
-		if not page_name:
-			page_name = ''	
-			page_name_slashed = ''
-		else:
-			page_name_slashed = page_name + '/'
+        return self._request(request, args, kwargs)
 
-		if not app_name:
-			app_name = ''
-			app_name_slashed = ''
-		else:
-			app_name_slashed = app_name + '/'
+    def get_context_data(self, request):
+        data = {}
+
+        try:
+            slug = str(self.kwargs['slug'])
+        except Exception, e:
+            logger.error('Kwargs[slug] isn\'t defined! Raised: ' + str(e))
+        else:
+            slug_method = getattr(self, slug)
+            data = slug_method(request)
+        finally:
+            return data
+
+    def get_template_name(self, request):
+        page_name = request.resolver_match.url_name
+        app_name = request.resolver_match.app_name
+
+        if not page_name:
+            page_name = ''
+            page_name_slashed = ''
+        else:
+            page_name_slashed = page_name + '/'
+
+        if not app_name:
+            app_name = ''
+            app_name_slashed = ''
+        else:
+            app_name_slashed = app_name + '/'
 
 
-		paths = []
+        paths = []
 
-		try:
-			slug = str(self.kwargs['slug'])
-		except Exception, e:
-			logger.error('Kwargs[slug] aren\'t defined! Raised: ' + str(e))
+        try:
+            slug = str(self.kwargs['slug'])
+        except Exception, e:
+            logger.error('Kwargs[slug] aren\'t defined! Raised: ' + str(e))
 
-			return app_name + '/404.html'
-		else:
-			if request.is_ajax():	
-				paths.append(app_name_slashed + page_name_slashed + slug + '.html')
-				paths.append(app_name_slashed + page_name + '.html')
-				paths.append(page_name_slashed + slug + '.html')
-			else:
-				paths.append(app_name_slashed + page_name_slashed + 'nonajax/' + slug + '.html')
-				paths.append(app_name_slashed + 'nonajax/' + page_name + '.html')
-				paths.append(app_name_slashed + 'nonajax/' + slug + '.html')
+            return app_name + '/404.html'
+        else:
+            if request.is_ajax():
+                paths.append(app_name_slashed + page_name_slashed + 'ajax/' + slug + '.html')
+                paths.append(app_name_slashed + 'ajax/' + page_name + '.html')
+                paths.append(app_name_slashed + 'ajax/' + slug + '.html')
+                paths.append(app_name_slashed + 'ajax/' + slug + '.html')
+            else:
+                paths.append(app_name_slashed + page_name_slashed + slug + '.html')
+                paths.append(app_name_slashed + page_name + '.html')
+                paths.append(page_name_slashed + slug + '.html')
 
-			for path in paths:
-				try:
-					template = loader.get_template(path)				
-				except Exception, e:
-					logger.error('Template not found! Raised: ' + str(e))
-				else:
-					logger.info('Template loaded: ' + str(path))
+            for path in paths:
+                try:
+                    template = loader.get_template(path)
+                except Exception, e:
+                    logger.error('Template not found! Raised: ' + str(e))
+                else:
+                    logger.info('Template loaded: ' + str(path))
 
-					return path
-				
-			logger.info('Not found available templates, loading 404 template!')
+                    return path
 
-			return '404.html'
- 
-	def paginate(obj, page, num_per_page):
-		paginator = Paginator(obj, num_per_page)
+            logger.info('Not found available templates, loading 404 template!')
 
-		try:
-			page = int(page)
-			obj = paginator.page(page)
-		except PageNotAnInteger:
-			page = 1
-			obj = paginator.page(page)
-		except EmptyPage:
-			page = paginator.num_pages
-			obj = paginator.page(page)
-		except:
-			page = 1
-			obj = paginator.page(page)
+            return '404.html'
 
-		try:
-			paginator.page(page - 10)
-			paginator.page(page - 11)
+    def paginate(obj, page, num_per_page):
+        paginator = Paginator(obj, num_per_page)
 
-			obj.has_less_ten = page - 10					
-		except EmptyPage:
-			pass
+        try:
+            page = int(page)
+            obj = paginator.page(page)
+        except PageNotAnInteger:
+            page = 1
+            obj = paginator.page(page)
+        except EmptyPage:
+            page = paginator.num_pages
+            obj = paginator.page(page)
+        except:
+            page = 1
+            obj = paginator.page(page)
 
-		try:
-			paginator.page(page - 2)
-			obj.has_less_two = page - 2
-		except EmptyPage:
-			pass
+        try:
+            paginator.page(page - 10)
+            paginator.page(page - 11)
 
-		try:
-			paginator.page(page - 3)
-			obj.has_less_three = page - 3
-		except EmptyPage:
-			pass
+            obj.has_less_ten = page - 10
+        except EmptyPage:
+            pass
 
-		obj.page = page
+        try:
+            paginator.page(page - 2)
+            obj.has_less_two = page - 2
+        except EmptyPage:
+            pass
 
-		try:
-			paginator.page(page + 2)
-			obj.has_more_two = page + 2
-		except EmptyPage:
-			pass
+        try:
+            paginator.page(page - 3)
+            obj.has_less_three = page - 3
+        except EmptyPage:
+            pass
 
-		try:
-			paginator.page(page + 3)
-			obj.has_more_three = page + 3
-		except EmptyPage:
-			pass
-		
-		try:
-			paginator.page(page + 10)
-			paginator.page(page + 11)
+        obj.page = page
 
-			obj.has_more_ten = page + 10					
-		except EmptyPage:
-			pass
+        try:
+            paginator.page(page + 2)
+            obj.has_more_two = page + 2
+        except EmptyPage:
+            pass
 
-		return obj
+        try:
+            paginator.page(page + 3)
+            obj.has_more_three = page + 3
+        except EmptyPage:
+            pass
+
+        try:
+            paginator.page(page + 10)
+            paginator.page(page + 11)
+
+            obj.has_more_ten = page + 10
+        except EmptyPage:
+            pass
+
+        return obj

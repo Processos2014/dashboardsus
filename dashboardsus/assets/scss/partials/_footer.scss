@@ -1,0 +1,33 @@
+#footer {
+    background: $blue;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+
+    footer {
+        .info {
+
+            h6, p{
+                color: $white;
+                text-align: justify;
+            }
+
+            p {
+                letter-spacing: 0.01em;
+            }
+        }
+
+        .social {
+
+            li {
+                float:right;
+                margin-left: 10px;
+
+                a {
+                    font-size: 2em;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

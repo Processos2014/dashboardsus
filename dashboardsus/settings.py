@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'grappelli.dashboard',
     'grappelli',
     'redactor',
+    'jsonify',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,6 +51,7 @@ INSTALLED_APPS = (
 
     'dashboardsus.apps.core',
     'dashboardsus.apps.accounts',
+    'dashboardsus.apps.gui',
 
     'gunicorn',
 )
