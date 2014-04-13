@@ -1,0 +1,15 @@
+@import "settings";
+@import "foundation";
+
+
+// Partials
+@import "partials/base";
+@import "partials/screen";
+@import "partials/header";
+@import "partials/container";
+@import "partials/footer";
+
+// Vendors
+@import "vendor/flexslider";
+@import "vendor/alertify.core";
+@import "vendor/alertify.default";

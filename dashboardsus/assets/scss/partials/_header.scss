@@ -1,0 +1,43 @@
+#header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .logo {
+    }
+
+    .nav {
+        margin-top:40px;
+
+        li {
+            float:right;
+            display:inline-block;
+            margin: 0 2px 0 0;
+            padding: 0;
+            -webkit-transition: background .25s ease-out;
+            -moz-transition: background .25s ease-out;
+            -o-transition: background .25s ease-out;
+            transition: background .25s ease-out;
+            border-radius: 2px;
+
+            a {
+                color: $black;
+                font-size: 22px;
+                font-weight: 300;
+                padding: 0 15px;
+                border-radius: 3px;
+                height: 31px;
+                line-height: 31px;
+                border: 2px transparent solid;
+                letter-spacing: 1px;
+            }
+
+            &:hover{
+
+            }
+
+            &.active {
+
+            }
+        }
+    }
+}
