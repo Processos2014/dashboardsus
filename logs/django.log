@@ -1,0 +1,143 @@
+
+
+[09/Apr/2014 18:42:36] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 18:45:39] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 18:46:07] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 18:46:09] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 18:46:56] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 18:46:57] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 18:46:59] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 18:47:25] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 18:56:55] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 18:56:56] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:02:01] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:02:16] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:02:18] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:02:51] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:04:01] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:04:37] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:06:43] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:09:54] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:10:11] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:10:12] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 19:10:13] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:13:15] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:15:07] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:17:44] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: partials/header.html
+[09/Apr/2014 21:17:44] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: gui.html
+[09/Apr/2014 21:17:44] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: partials/header.html
+[09/Apr/2014 21:17:44] INFO [dashboardsus.apps.core.views:176] Not found available templates, loading 404 template!
+[09/Apr/2014 21:18:10] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:18:36] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:18:48] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:19:19] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:19:31] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:19:41] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:19:57] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:20:25] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:20:27] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:20:28] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:20:34] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:20:35] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:20:58] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:20:59] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:21:15] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:21:18] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:21:20] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:21:23] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:21:24] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:21:25] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:21:48] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:21:59] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:22:00] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:22:01] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:04] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:05] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:12] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:14] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:15] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:16] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:21] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:22] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:23] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:23] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:24] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:27] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:24:29] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: gui/login.html
+[09/Apr/2014 21:24:29] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: gui.html
+[09/Apr/2014 21:24:29] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: gui/login.html
+[09/Apr/2014 21:24:29] INFO [dashboardsus.apps.core.views:176] Not found available templates, loading 404 template!
+[09/Apr/2014 21:24:41] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:26:16] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:26:19] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:26:38] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:39:39] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:42:44] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:44:13] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:44:19] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:47:08] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:47:10] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:47:40] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:47:43] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:47:56] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:49:14] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:49:17] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:51:23] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:51:47] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:51:49] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:54:11] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:54:42] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:54:44] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:56:35] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:56:51] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:56:57] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:57:06] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:57:12] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 21:59:34] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:01:13] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:01:46] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:02:40] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:04:58] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:05:58] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:06:02] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:06:30] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:06:35] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:06:51] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:07:19] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:10:41] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:16:24] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:16:26] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:17:06] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:17:24] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:17:46] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:17:49] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:18:03] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:19:12] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:28:55] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:29:37] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:29:39] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:29:55] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:30:15] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:31:48] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:31:50] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:32:32] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:34:42] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:35:18] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:35:25] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:35:26] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: gui/login.html
+[09/Apr/2014 22:35:26] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: gui.html
+[09/Apr/2014 22:35:26] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: gui/login.html
+[09/Apr/2014 22:35:26] INFO [dashboardsus.apps.core.views:176] Not found available templates, loading 404 template!
+[09/Apr/2014 22:35:38] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:35:50] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:35:55] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:41:26] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:41:28] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:41:29] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:46:05] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:46:09] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:46:11] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:51:12] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:51:38] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[09/Apr/2014 22:51:53] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[13/Apr/2014 11:13:22] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
