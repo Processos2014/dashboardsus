@@ -28,9 +28,29 @@ from dashboardsus.apps.core.models import (
 class GUI(GenericView):
     def home(self, request):
         relatorios_de_pacientes = Pacientes.objects.all()
+        relatorio_consultas_medicas = ConsultasMedicas.objects.all()
 
         quantidade_de_homens = 0
         quantidade_de_mulheres = 0
+        quantidade_fora_area_abrangencia = 0
+        quantidade_area_abrangencia = 0
+
+        for relatorio in relatorio_consultas_medicas:
+            quantidade_area_abrangencia += (
+                int(relatorio.menor_que_um) + \
+                int(relatorio.um_a_quatro) + \
+                int(relatorio.cinco_a_nove) + \
+                int(relatorio.dez_a_quatorze) + \
+                int(relatorio.quinze_a_dezenove) + \
+                int(relatorio.vinte_a_trinta_e_nove) + \
+                int(relatorio.quarenta_a_quarenta_e_nove) + \
+                int(relatorio.cinquenta_a_cinquenta_e_nove) + \
+                int(relatorio.maior_que_sessenta)
+            )
+
+            quantidade_fora_area_abrangencia += (
+                int(relatorio.todos)
+            )
 
         for relatorio in relatorios_de_pacientes:
             quantidade_de_homens += (
@@ -63,5 +83,7 @@ class GUI(GenericView):
             'template' : {
                 'homens' : quantidade_de_homens,
                 'mulheres' : quantidade_de_mulheres,
+                'qtd_dentro' : quantidade_area_abrangencia,
+                'qtd_fora' : quantidade_fora_area_abrangencia
             }
         }
