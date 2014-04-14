@@ -7803,9 +7803,8 @@ body {
 }
 /* line 17, ../scss/partials/_screen.scss */
 body .button {
-  background-color: #199cd8;
+  background-color: #40b1b2;
   border: 0;
-  border-radius: 2px;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
@@ -7820,7 +7819,7 @@ body .button {
   box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
   margin: 0;
 }
-/* line 36, ../scss/partials/_screen.scss */
+/* line 35, ../scss/partials/_screen.scss */
 body .widget {
   margin-top: 30px;
   background-color: #FFF;
@@ -7831,15 +7830,15 @@ body .widget {
   margin-bottom: 2px;
   border-radius: 4px;
 }
-/* line 46, ../scss/partials/_screen.scss */
+/* line 45, ../scss/partials/_screen.scss */
 body .widget:not(:first-child) h6 {
   font-weight: 600;
 }
-/* line 50, ../scss/partials/_screen.scss */
+/* line 49, ../scss/partials/_screen.scss */
 body .widget:first-child {
   margin-top: 0;
 }
-/* line 54, ../scss/partials/_screen.scss */
+/* line 53, ../scss/partials/_screen.scss */
 body .widget header h6 {
   text-transform: uppercase;
 }
@@ -7878,11 +7877,16 @@ body .widget header h6 {
   letter-spacing: 1px;
 }
 
-/* line 7, ../scss/partials/_container.scss */
+/* line 1, ../scss/partials/_container.scss */
+#container-login {
+  margin-top: 100px;
+}
+
+/* line 11, ../scss/partials/_container.scss */
 #container > aside .tabs ul li img {
   background: black;
 }
-/* line 11, ../scss/partials/_container.scss */
+/* line 15, ../scss/partials/_container.scss */
 #container > aside .tabs ul li .post-title {
   margin: 0 0 10px 0;
   padding: 0 0 10px 0;
@@ -7892,7 +7896,7 @@ body .widget header h6 {
   border-bottom: 1px #f0f0f0 dotted;
   border-bottom-color: rgba(0, 0, 0, 0.15);
 }
-/* line 21, ../scss/partials/_container.scss */
+/* line 25, ../scss/partials/_container.scss */
 #container > aside .tabs ul li .post-meta {
   font-size: 12px;
   line-height: 15px;
@@ -7900,12 +7904,12 @@ body .widget header h6 {
   color: #999;
   color: rgba(0, 0, 0, 0.35);
 }
-/* line 36, ../scss/partials/_container.scss */
+/* line 40, ../scss/partials/_container.scss */
 #container .content .banner .flexslider {
   background: black;
   position: relative;
 }
-/* line 40, ../scss/partials/_container.scss */
+/* line 44, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption {
   position: absolute;
   width: 100%;
@@ -7916,34 +7920,34 @@ body .widget header h6 {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 15px;
 }
-/* line 50, ../scss/partials/_container.scss */
+/* line 54, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption h5 {
   font-weight: 600px;
 }
-/* line 54, ../scss/partials/_container.scss */
+/* line 58, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption .date {
   margin: 0;
   color: #EEE;
   text-transform: uppercase;
   font-size: 13px;
 }
-/* line 61, ../scss/partials/_container.scss */
+/* line 65, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption h5 {
   margin: 0;
 }
-/* line 65, ../scss/partials/_container.scss */
+/* line 69, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption p {
   margin-bottom: 5px;
 }
-/* line 69, ../scss/partials/_container.scss */
+/* line 73, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption a {
   color: white;
 }
-/* line 76, ../scss/partials/_container.scss */
+/* line 80, ../scss/partials/_container.scss */
 #container .content .posts {
   margin-top: 60px;
 }
-/* line 79, ../scss/partials/_container.scss */
+/* line 83, ../scss/partials/_container.scss */
 #container .content .posts article {
   margin-top: 40px;
   overflow: hidden;
@@ -7955,31 +7959,31 @@ body .widget header h6 {
   margin-bottom: 2px;
   border-radius: 2px;
 }
-/* line 90, ../scss/partials/_container.scss */
+/* line 94, ../scss/partials/_container.scss */
 #container .content .posts article figure {
   margin: 0;
   position: relative;
 }
-/* line 94, ../scss/partials/_container.scss */
+/* line 98, ../scss/partials/_container.scss */
 #container .content .posts article figure figcaption {
   position: absolute;
   top: 0;
   width: 100%;
 }
-/* line 99, ../scss/partials/_container.scss */
+/* line 103, ../scss/partials/_container.scss */
 #container .content .posts article figure figcaption .line {
   top: 0;
   width: 100%;
   height: 8px;
-  background-color: #199cd8;
+  background-color: #40b1b2;
 }
-/* line 106, ../scss/partials/_container.scss */
+/* line 110, ../scss/partials/_container.scss */
 #container .content .posts article figure figcaption h6 {
   position: absolute;
   left: 10px;
   top: 0;
   display: block;
-  background-color: #199cd8;
+  background-color: #40b1b2;
   color: #FFF;
   font-size: 13px;
   text-transform: uppercase;
@@ -7990,27 +7994,27 @@ body .widget header h6 {
   box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.08);
   font-weight: 400;
 }
-/* line 126, ../scss/partials/_container.scss */
+/* line 130, ../scss/partials/_container.scss */
 #container .content .posts article .description {
   padding: 0 30px;
 }
-/* line 131, ../scss/partials/_container.scss */
+/* line 135, ../scss/partials/_container.scss */
 #container .content .posts article .read-more {
   margin-bottom: 15px;
 }
-/* line 135, ../scss/partials/_container.scss */
+/* line 139, ../scss/partials/_container.scss */
 #container .content .posts article header h2 {
   padding: 30px 35px 20px;
   text-align: center;
 }
-/* line 139, ../scss/partials/_container.scss */
+/* line 143, ../scss/partials/_container.scss */
 #container .content .posts article header h2 a {
   font-weight: 400;
 }
 
 /* line 1, ../scss/partials/_footer.scss */
 #footer {
-  background: #199cd8;
+  background: #40b1b2;
   padding-top: 30px;
   padding-bottom: 20px;
   margin-top: 30px;

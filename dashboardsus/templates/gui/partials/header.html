@@ -5,11 +5,20 @@
     </div>
     <ul class="no-bullet nav large-9 columns">
         <li>
-            <a href="">Sobre</a>
+            {% if user.is_authenticated %}
+                <a href="/accounts/logoff/">Sair</a>
+            {% else %}
+                <a href="/accounts/logon/">Entrar</a>
+            {% endif %}
         </li>
-        <li>
-            <a href="">Logar</a>
-        </li>
+        {% if user.is_authenticated %}
+            <li>
+                <a href="">Formulário B</a>
+            </li>
+            <li>
+                <a href="">Formulário A</a>
+            </li>
+        {% endif %}
         <li>
             <a href="/home/">Início</a>
         </li>

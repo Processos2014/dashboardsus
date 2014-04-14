@@ -177,6 +177,10 @@ GRAPPELLI_INDEX_DASHBOARD = 'dashboardsus.dashboard.CustomIndexDashboard'
 REDACTOR_OPTIONS = {'lang': 'en'}
 REDACTOR_UPLOAD = os.path.join(MEDIA_ROOT, 'upload')
 
+# Custom user definition
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

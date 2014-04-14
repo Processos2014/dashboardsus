@@ -25,6 +25,7 @@ from dashboardsus.apps.core.models import (
     Unidade,
     Area
 )
+
 class GUI(GenericView):
     def home(self, request):
         relatorios_de_pacientes = Pacientes.objects.all()
