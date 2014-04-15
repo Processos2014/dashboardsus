@@ -14,4 +14,6 @@ urlpatterns = patterns('',
 
     url(r'^$', RedirectView.as_view(url='/home/')),
     url(r'^(?P<slug>\w+)/$', GUI.as_view(), name='gui',),
+    url(r'^(?P<slug>\w+)/(?P<pk>\d+)/$', GUI.as_view(), name='gui',),
+    url(r'^(?P<slug>\w+)/search$', GUI.as_view(), name='gui',),
 )

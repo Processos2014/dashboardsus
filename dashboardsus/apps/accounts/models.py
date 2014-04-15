@@ -81,18 +81,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = 'colaboradores' # Translation not found to 'colaboradores'
 
     def __unicode__(self):
-
         return self.username
 
-    def get_full_name(self):
-
-        full_name = self.full_name
-        return full_name.strip()
-
     def get_short_name(self):
-
-        return self.short_name.strip()
-
-    def email_user(self, subject, message, from_email=None):
-
-        send_mail(subject, message, from_email, [self.email])
+        return self.first_name

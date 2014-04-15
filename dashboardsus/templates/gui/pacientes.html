@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% load jsonify %}
+
+{% block header %}
+    {% include "gui/partials/header.html" %}
+{% endblock %}
+
+{% block container %}
+    <div id="container" class="row">
+        <a href="/adicionar_pacientes/" class="add-button button">Adicionar relatório de pacientes</a>
+        <table class="column">
+            <thead>
+                <tr>
+                    <th>Município</th>
+                    <th>Unidade</th>
+                    <th>Área</th>
+                    <th>Ano</th>
+                    <th>Mês</th>
+                    <th colspan="2">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for paciente in pacientes %}
+                    <tr id="paciente{{ paciente.pk }}">
+                        <td>{{ paciente.area.unidade.municipio.nome }}</td>
+                        <td>{{ paciente.area.unidade.codigo }}</td>
+                        <td>{{ paciente.area.codigo }}</td>
+                        <td>{{ paciente.ano }}</td>
+                        <td>{{ paciente.mes }}</td>
+                        <td>
+                            <a class="icon-quill" href="/editar_pacientes/{{ paciente.pk }}/"></a>
+                        </td>
+                        <td>
+                            <a class="icon-remove" data-get="/deletar_pacientes/{{ paciente.pk }}/" data-events-before-request="remove #paciente{{ paciente.pk }}"></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

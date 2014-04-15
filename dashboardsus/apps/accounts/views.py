@@ -112,6 +112,7 @@ class AccountsView(GenericView):
 
 						data = {
 							'leftover' : {
+                                'alert-success' : 'Usuário autenticado com sucesso!',
 								'redirect' : '/home/'
 							}
 						}
@@ -132,6 +133,7 @@ class AccountsView(GenericView):
 
 		return {
 			'leftover' : {
-				'redirect' : '/accounts/logon/',
+                'alert-success' : 'Usuário deslogado com sucesso!',
+				'redirect' : '/home/',
 			}
 		}

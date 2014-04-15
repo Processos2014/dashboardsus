@@ -5,9 +5,88 @@
 {% endblock %}
 
 {% block container %}
-    <div id="container" style="width:100%; height:400px;"></div>
-    <div id="container2" style="width:100%; height:400px;"></div>
-    <div id="container3" style="width:100%; height:400px;"></div>
+    <div class="row">
+        <form action="/home/search" method="get" data-default="true">
+            <div class="large-2 columns">
+                <label for="municipio">Município</label>
+                <select id="municipio" class="selector" name="municipio">
+                    <option value=""> ----------- </option>
+                    {% for m in municipios %}
+                        <option value="{{ m.pk }}" {% if m = municipio %} selected="selected" {% endif %}>{{ m.nome }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="large-2 columns">
+                <label for="unidade">Unidade</label>
+                <select id="unidade" class="selector" name="unidade">
+                    <option value=""> ------------ </option>
+                    {% for u in unidades %}
+                        <option value="{{ u.pk }}" {% if u = unidade %} selected="selected" {% endif %}>{{ u.codigo }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="large-3 columns">
+                <label for="area">Área</label>
+                <select id="area" class="selector" name="area">
+                    <option value=""> ----------------- </option>
+                    {% for a in areas %}
+                        <option value="{{ a.pk }}" {% if a = area %} selected="selected" {% endif %}>{{ a.codigo }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="large-2 columns">
+                <label for="ano">Ano</label>
+                <select id="ano" class="selector" name="ano">
+                    <option value=""> ---- </option>
+                    <option value="2010" {% if ano = "2010" %} selected="selected" {% endif %}>2010</option>
+                    <option value="2011" {% if ano = "2011" %} selected="selected" {% endif %}>2011</option>
+                    <option value="2012" {% if ano = "2012" %} selected="selected" {% endif %}>2012</option>
+                    <option value="2013" {% if ano = "2013" %} selected="selected" {% endif %}>2013</option>
+                    <option value="2014" {% if ano = "2014" %} selected="selected" {% endif %}>2014</option>
+                    <option value="2015" {% if ano = "2015" %} selected="selected" {% endif %}>2015</option>
+                    <option value="2016" {% if ano = "2016" %} selected="selected" {% endif %}>2016</option>
+                    <option value="2017" {% if ano = "2017" %} selected="selected" {% endif %}>2017</option>
+                    <option value="2018" {% if ano = "2018" %} selected="selected" {% endif %}>2018</option>
+                    <option value="2019" {% if ano = "2019" %} selected="selected" {% endif %}>2019</option>
+                    <option value="2020" {% if ano = "2020" %} selected="selected" {% endif %}>2020</option>
+                </select>
+            </div>
+            <div class="large-2 columns">
+                <label for="mes">Mês</label>
+                <select id="mes" class="selector" name="mes">
+                    <option value=""> -- </option>
+                    <option value="01" {% if mes = "01"%} selected="selected" {% endif %}>Janeiro</option>
+                    <option value="02" {% if mes = "02"%} selected="selected" {% endif %}>Fevereiro</option>
+                    <option value="03" {% if mes = "03"%} selected="selected" {% endif %}>Março</option>
+                    <option value="04" {% if mes = "04"%} selected="selected" {% endif %}>Abril</option>
+                    <option value="05" {% if mes = "05"%} selected="selected" {% endif %}>Maio</option>
+                    <option value="06" {% if mes = "06"%} selected="selected" {% endif %}>Junho</option>
+                    <option value="07" {% if mes = "07"%} selected="selected" {% endif %}>Julho</option>
+                    <option value="08" {% if mes = "08"%} selected="selected" {% endif %}>Agosto</option>
+                    <option value="09" {% if mes = "09"%} selected="selected" {% endif %}>Setembro</option>
+                    <option value="10" {% if mes = "10"%} selected="selected" {% endif %}>Outubro</option>
+                    <option value="11" {% if mes = "11"%} selected="selected" {% endif %}>Novembro</option>
+                    <option value="12" {% if mes = "12"%} selected="selected" {% endif %}>Dezembro</option>
+                </select>
+            </div>
+            <div class="large-1 columns">
+                <input type="submit" class="button search-button" value=">">
+            </div>
+        </form>
+    </div>
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <div id="container" style="width:100%; height:400px;"></div>
+            </li>
+            <li>
+                <div id="container2" style="width:100%; height:400px;"></div>
+            </li>
+            <li>
+                <div id="container3" style="width:100%; height:400px;"></div>
+            </li>
+        </ul>
+    </div>
 {% endblock %}
 
 {% load jsonify %}
@@ -96,6 +175,74 @@
             });
         });
     /**Fim gráfico de consultas dentro e fora da área**/
+
+    /**Inicio do gráfico de pacientes cadastrados por faixa etária**/
+    $(function () {
+        $('#container3').highcharts({
+            chart: {
+                type: 'column',
+                backgroundColor: "#f9f5f2",
+                plotBackgroundColor: "#f9f5f2",
+                plotBorderWidth: 0,
+                plotShadow: false
+            },
+            title: {
+                text: 'Pacientes Cadastrados'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                categories: [
+                    '< 1',
+                    '1 - 4',
+                    '5 - 6',
+                    '7 - 8',
+                    '10 - 14',
+                    '15 - 19',
+                    '20 - 39',
+                    '40 - 49',
+                    '50 - 59',
+                    '> 60'
+                ],
+                title: {
+                    text: 'Faixa etária'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Quantidade'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y}</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Masculino',
+                data: {{dic_homens|jsonify}},
+                color: '#00A3EB'
+            }, {
+                name: 'Feminino',
+                data: {{dic_mulheres|jsonify}},
+                color: '#E03834',
+            }]
+        });
+    });
+
+    /**Fim do gráfico de pacientes cadastrados por faixa etária**/
+
     </script>
     <style>
         text[text-anchor="end"] {

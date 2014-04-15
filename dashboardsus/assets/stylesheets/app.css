@@ -7882,11 +7882,34 @@ body .widget header h6 {
   margin-top: 100px;
 }
 
-/* line 11, ../scss/partials/_container.scss */
+/* line 5, ../scss/partials/_container.scss */
+.search-button {
+  margin-top: 20px !important;
+}
+
+/* line 10, ../scss/partials/_container.scss */
+#container .add-button {
+  float: right;
+  margin: 0 0 10px 0;
+}
+/* line 15, ../scss/partials/_container.scss */
+#container .add-form {
+  height: 100px;
+}
+/* line 18, ../scss/partials/_container.scss */
+#container .add-form select {
+  margin-right: 10px;
+}
+/* line 24, ../scss/partials/_container.scss */
+#container table thead tr th,
+#container table tbody tr td {
+  text-align: center;
+}
+/* line 33, ../scss/partials/_container.scss */
 #container > aside .tabs ul li img {
   background: black;
 }
-/* line 15, ../scss/partials/_container.scss */
+/* line 37, ../scss/partials/_container.scss */
 #container > aside .tabs ul li .post-title {
   margin: 0 0 10px 0;
   padding: 0 0 10px 0;
@@ -7896,7 +7919,7 @@ body .widget header h6 {
   border-bottom: 1px #f0f0f0 dotted;
   border-bottom-color: rgba(0, 0, 0, 0.15);
 }
-/* line 25, ../scss/partials/_container.scss */
+/* line 47, ../scss/partials/_container.scss */
 #container > aside .tabs ul li .post-meta {
   font-size: 12px;
   line-height: 15px;
@@ -7904,12 +7927,12 @@ body .widget header h6 {
   color: #999;
   color: rgba(0, 0, 0, 0.35);
 }
-/* line 40, ../scss/partials/_container.scss */
+/* line 62, ../scss/partials/_container.scss */
 #container .content .banner .flexslider {
   background: black;
   position: relative;
 }
-/* line 44, ../scss/partials/_container.scss */
+/* line 66, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption {
   position: absolute;
   width: 100%;
@@ -7920,34 +7943,34 @@ body .widget header h6 {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 15px;
 }
-/* line 54, ../scss/partials/_container.scss */
+/* line 76, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption h5 {
   font-weight: 600px;
 }
-/* line 58, ../scss/partials/_container.scss */
+/* line 80, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption .date {
   margin: 0;
   color: #EEE;
   text-transform: uppercase;
   font-size: 13px;
 }
-/* line 65, ../scss/partials/_container.scss */
+/* line 87, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption h5 {
   margin: 0;
 }
-/* line 69, ../scss/partials/_container.scss */
+/* line 91, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption p {
   margin-bottom: 5px;
 }
-/* line 73, ../scss/partials/_container.scss */
+/* line 95, ../scss/partials/_container.scss */
 #container .content .banner .flexslider .slide-caption a {
   color: white;
 }
-/* line 80, ../scss/partials/_container.scss */
+/* line 102, ../scss/partials/_container.scss */
 #container .content .posts {
   margin-top: 60px;
 }
-/* line 83, ../scss/partials/_container.scss */
+/* line 105, ../scss/partials/_container.scss */
 #container .content .posts article {
   margin-top: 40px;
   overflow: hidden;
@@ -7959,25 +7982,25 @@ body .widget header h6 {
   margin-bottom: 2px;
   border-radius: 2px;
 }
-/* line 94, ../scss/partials/_container.scss */
+/* line 116, ../scss/partials/_container.scss */
 #container .content .posts article figure {
   margin: 0;
   position: relative;
 }
-/* line 98, ../scss/partials/_container.scss */
+/* line 120, ../scss/partials/_container.scss */
 #container .content .posts article figure figcaption {
   position: absolute;
   top: 0;
   width: 100%;
 }
-/* line 103, ../scss/partials/_container.scss */
+/* line 125, ../scss/partials/_container.scss */
 #container .content .posts article figure figcaption .line {
   top: 0;
   width: 100%;
   height: 8px;
   background-color: #40b1b2;
 }
-/* line 110, ../scss/partials/_container.scss */
+/* line 132, ../scss/partials/_container.scss */
 #container .content .posts article figure figcaption h6 {
   position: absolute;
   left: 10px;
@@ -7994,20 +8017,20 @@ body .widget header h6 {
   box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.08);
   font-weight: 400;
 }
-/* line 130, ../scss/partials/_container.scss */
+/* line 152, ../scss/partials/_container.scss */
 #container .content .posts article .description {
   padding: 0 30px;
 }
-/* line 135, ../scss/partials/_container.scss */
+/* line 157, ../scss/partials/_container.scss */
 #container .content .posts article .read-more {
   margin-bottom: 15px;
 }
-/* line 139, ../scss/partials/_container.scss */
+/* line 161, ../scss/partials/_container.scss */
 #container .content .posts article header h2 {
   padding: 30px 35px 20px;
   text-align: center;
 }
-/* line 143, ../scss/partials/_container.scss */
+/* line 165, ../scss/partials/_container.scss */
 #container .content .posts article header h2 a {
   font-weight: 400;
 }
@@ -8668,4 +8691,558 @@ html[xmlns] .slides {
 /* line 69, ../scss/vendor/_alertify.default.scss */
 .alertify-log-success {
   background: #505050;
+}
+
+/**
+ * Handsontable 0.10.5
+ * Handsontable is a simple jQuery plugin for editable tables with basic copy-paste compatibility with Excel and Google Docs
+ *
+ * Copyright 2012, Marcin Warpechowski
+ * Licensed under the MIT license.
+ * http://handsontable.com/
+ *
+ * Date: Mon Mar 31 2014 14:19:47 GMT+0200 (CEST)
+ */
+/* line 12, ../scss/vendor/_handsontable.scss */
+.handsontable {
+  position: relative;
+}
+
+/* line 16, ../scss/vendor/_handsontable.scss */
+.handsontable.htAutoColumnSize {
+  visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+/* line 28, ../scss/vendor/_handsontable.scss */
+.handsontable table,
+.handsontable tbody,
+.handsontable thead,
+.handsontable td,
+.handsontable th,
+.handsontable div {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+
+/* line 34, ../scss/vendor/_handsontable.scss */
+.handsontable table.htCore {
+  border-collapse: separate;
+  /*it must be separate, otherwise there are offset miscalculations in WebKit: http://stackoverflow.com/questions/2655987/border-collapse-differences-in-ff-and-webkit*/
+  position: relative;
+                     /*this actually only changes appearance of user selection - does not make text unselectable
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+-ms-user-select: none;
+/*user-select: none; /*no browser supports unprefixed version*/
+  border-spacing: 0;
+  margin: 0;
+  border-width: 0;
+  table-layout: fixed;
+  width: 0;
+  outline-width: 0;
+  /* reset bootstrap table style. for more info see: https://github.com/warpech/jquery-handsontable/issues/224 */
+  max-width: none;
+  max-height: none;
+}
+
+/* line 56, ../scss/vendor/_handsontable.scss */
+.handsontable col {
+  width: 50px;
+}
+
+/* line 60, ../scss/vendor/_handsontable.scss */
+.handsontable col.rowHeader {
+  width: 50px;
+}
+
+/* line 65, ../scss/vendor/_handsontable.scss */
+.handsontable th,
+.handsontable td {
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  height: 22px;
+  empty-cells: show;
+  line-height: 21px;
+  padding: 0 4px 0 4px;
+  /* top, bottom padding different than 0 is handled poorly by FF with HTML5 doctype */
+  background-color: #FFF;
+  vertical-align: top;
+  overflow: hidden;
+  outline-width: 0;
+  white-space: pre-line;
+  /* preserve new line character in cell */
+}
+
+/* line 81, ../scss/vendor/_handsontable.scss */
+.handsontable td.htInvalid {
+  -webkit-transition: background 0.75s ease;
+  transition: background 0.75s ease;
+  background-color: #ff4c42;
+}
+
+/* line 87, ../scss/vendor/_handsontable.scss */
+.handsontable th:last-child {
+  /*Foundation framework fix*/
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+
+/* line 95, ../scss/vendor/_handsontable.scss */
+.handsontable tr:first-child th.htNoFrame,
+.handsontable th:first-child.htNoFrame,
+.handsontable th.htNoFrame {
+  border-left-width: 0;
+  background-color: white;
+  border-color: #FFF;
+}
+
+/* line 104, ../scss/vendor/_handsontable.scss */
+.handsontable th:first-child,
+.handsontable td:first-child,
+.handsontable .htNoFrame + th,
+.handsontable .htNoFrame + td {
+  border-left: 1px solid #CCC;
+}
+
+/* line 109, ../scss/vendor/_handsontable.scss */
+.handsontable tr:first-child th,
+.handsontable tr:first-child td {
+  border-top: 1px solid #CCC;
+}
+
+/* line 113, ../scss/vendor/_handsontable.scss */
+.handsontable thead tr:last-child th {
+  border-bottom-width: 0;
+}
+
+/* line 117, ../scss/vendor/_handsontable.scss */
+.handsontable thead tr.lastChild th {
+  border-bottom-width: 0;
+}
+
+/* line 121, ../scss/vendor/_handsontable.scss */
+.handsontable th {
+  background-color: #EEE;
+  color: #222;
+  text-align: center;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+/* line 129, ../scss/vendor/_handsontable.scss */
+.handsontable thead th {
+  padding: 0;
+}
+
+/* line 133, ../scss/vendor/_handsontable.scss */
+.handsontable th.active {
+  background-color: #CCC;
+}
+
+/* line 137, ../scss/vendor/_handsontable.scss */
+.handsontable thead th .relative {
+  position: relative;
+  padding: 2px 4px;
+}
+
+/* plugins */
+/* line 144, ../scss/vendor/_handsontable.scss */
+.handsontable .manualColumnMover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  width: 5px;
+  height: 25px;
+  z-index: 999;
+  cursor: move;
+}
+
+/* line 156, ../scss/vendor/_handsontable.scss */
+.handsontable th .manualColumnMover:hover,
+.handsontable th .manualColumnMover.active {
+  background-color: #88F;
+}
+
+/* line 160, ../scss/vendor/_handsontable.scss */
+.handsontable .manualColumnResizer {
+  position: absolute;
+  top: 0;
+  cursor: col-resize;
+}
+
+/* line 166, ../scss/vendor/_handsontable.scss */
+.handsontable .manualColumnResizerHandle {
+  background-color: transparent;
+  width: 5px;
+  height: 25px;
+}
+
+/* line 173, ../scss/vendor/_handsontable.scss */
+.handsontable .manualColumnResizer:hover .manualColumnResizerHandle,
+.handsontable .manualColumnResizer.active .manualColumnResizerHandle {
+  background-color: #AAB;
+}
+
+/* line 177, ../scss/vendor/_handsontable.scss */
+.handsontable .manualColumnResizerLine {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #AAB;
+  display: none;
+  width: 0;
+  border-right: 1px dashed #777;
+}
+
+/* line 187, ../scss/vendor/_handsontable.scss */
+.handsontable .manualColumnResizer.active .manualColumnResizerLine {
+  display: block;
+}
+
+/* line 191, ../scss/vendor/_handsontable.scss */
+.handsontable .columnSorting:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* border line */
+/* line 198, ../scss/vendor/_handsontable.scss */
+.handsontable .wtBorder {
+  position: absolute;
+  font-size: 0;
+}
+
+/* line 203, ../scss/vendor/_handsontable.scss */
+.handsontable td.area {
+  background-color: #EEF4FF;
+}
+
+/* fill handle */
+/* line 209, ../scss/vendor/_handsontable.scss */
+.handsontable .wtBorder.corner {
+  font-size: 0;
+  cursor: crosshair;
+}
+
+/* line 214, ../scss/vendor/_handsontable.scss */
+.handsontable .htBorder.htFillBorder {
+  background: red;
+  width: 1px;
+  height: 1px;
+}
+
+/* line 220, ../scss/vendor/_handsontable.scss */
+.handsontableInput {
+  border: 2px solid #5292F7;
+  outline-width: 0;
+  margin: 0;
+  padding: 1px 4px 0 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  /*repeat from .handsontable (inherit doesn't work with IE<8) */
+  line-height: 1.3em;
+  /*repeat from .handsontable (inherit doesn't work with IE<8) */
+  font-size: inherit;
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+  resize: none;
+  /*below are needed to overwrite stuff added by jQuery UI Bootstrap theme*/
+  display: inline-block;
+  color: #000;
+  border-radius: 0;
+  background-color: #FFF;
+  /*overwrite styles potentionally made by a framework*/
+}
+
+/* line 241, ../scss/vendor/_handsontable.scss */
+.handsontableInputHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* line 248, ../scss/vendor/_handsontable.scss */
+.htSelectEditor {
+  -webkit-appearance: menulist-button !important;
+  position: absolute;
+}
+
+/*
+TextRenderer readOnly cell
+*/
+/* line 257, ../scss/vendor/_handsontable.scss */
+.handsontable .htDimmed {
+  color: #777;
+}
+
+/*
+TextRenderer placeholder value
+*/
+/* line 265, ../scss/vendor/_handsontable.scss */
+.handsontable .htPlaceholder {
+  color: #999;
+}
+
+/*
+AutocompleteRenderer down arrow
+*/
+/* line 273, ../scss/vendor/_handsontable.scss */
+.handsontable .htAutocompleteArrow {
+  float: right;
+  font-size: 10px;
+  color: #EEE;
+  cursor: default;
+  width: 16px;
+  text-align: center;
+}
+
+/* line 282, ../scss/vendor/_handsontable.scss */
+.handsontable td .htAutocompleteArrow:hover {
+  color: #777;
+}
+
+/*
+CheckboxRenderer
+*/
+/* line 290, ../scss/vendor/_handsontable.scss */
+.handsontable .htCheckboxRendererInput.noValue {
+  opacity: 0.5;
+}
+
+/*
+NumericRenderer
+*/
+/* line 298, ../scss/vendor/_handsontable.scss */
+.handsontable .htNumeric {
+  text-align: right;
+}
+
+/*context menu rules*/
+/* line 304, ../scss/vendor/_handsontable.scss */
+ul.context-menu-list {
+  color: black;
+}
+
+/* line 308, ../scss/vendor/_handsontable.scss */
+ul.context-menu-list li {
+  margin-bottom: 0;
+  /*Foundation framework fix*/
+}
+
+/**
+ * dragdealer
+ */
+/* line 317, ../scss/vendor/_handsontable.scss */
+.handsontable .dragdealer {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  background: #F8F8F8;
+  border: 1px solid #DDD;
+}
+
+/* line 325, ../scss/vendor/_handsontable.scss */
+.handsontable .dragdealer .handle {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #C5C5C5;
+}
+
+/* line 332, ../scss/vendor/_handsontable.scss */
+.handsontable .dragdealer .disabled {
+  background: #898989;
+}
+
+/**
+ * Handsontable in Handsontable
+ */
+/* line 340, ../scss/vendor/_handsontable.scss */
+.handsontable .handsontable .wtHider {
+  padding: 0 0 5px 0;
+}
+
+/* line 344, ../scss/vendor/_handsontable.scss */
+.handsontable .handsontable table {
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/**
+ * Handsontable listbox theme
+ */
+/* line 353, ../scss/vendor/_handsontable.scss */
+.handsontable.listbox {
+  margin: 0;
+}
+
+/* line 357, ../scss/vendor/_handsontable.scss */
+.handsontable.listbox table {
+  border: 1px solid #ccc;
+  border-collapse: separate;
+  background: white;
+}
+
+/* line 367, ../scss/vendor/_handsontable.scss */
+.handsontable.listbox th,
+.handsontable.listbox tr:first-child th,
+.handsontable.listbox tr:last-child th,
+.handsontable.listbox tr:first-child td,
+.handsontable.listbox td {
+  border-width: 0;
+}
+
+/* line 372, ../scss/vendor/_handsontable.scss */
+.handsontable.listbox th,
+.handsontable.listbox td {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* line 377, ../scss/vendor/_handsontable.scss */
+.handsontable.listbox td.htDimmed {
+  cursor: default;
+  color: inherit;
+  font-style: inherit;
+}
+
+/* line 383, ../scss/vendor/_handsontable.scss */
+.handsontable.listbox .wtBorder {
+  visibility: hidden;
+}
+
+/* line 388, ../scss/vendor/_handsontable.scss */
+.handsontable.listbox tr td.current,
+.handsontable.listbox tr:hover td {
+  background: #eee;
+}
+
+/* line 392, ../scss/vendor/_handsontable.scss */
+.htContextMenu {
+  display: none;
+  position: absolute;
+}
+
+/* line 397, ../scss/vendor/_handsontable.scss */
+.htContextMenu table.htCore {
+  outline: 1px solid #bbb;
+}
+
+/* line 401, ../scss/vendor/_handsontable.scss */
+.htContextMenu .wtBorder {
+  visibility: hidden;
+}
+
+/* line 405, ../scss/vendor/_handsontable.scss */
+.htContextMenu table tbody tr td {
+  background: white;
+  border-width: 0;
+  padding: 4px 6px 0px 6px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* line 415, ../scss/vendor/_handsontable.scss */
+.htContextMenu table tbody tr td:first-child {
+  border: 0;
+}
+
+/* line 419, ../scss/vendor/_handsontable.scss */
+.htContextMenu table tbody tr td.htDimmed {
+  font-style: normal;
+  color: #323232;
+}
+
+/* line 424, ../scss/vendor/_handsontable.scss */
+.htContextMenu table tbody tr td.current {
+  background: #e9e9e9;
+}
+
+/* line 428, ../scss/vendor/_handsontable.scss */
+.htContextMenu table tbody tr td.htSeparator {
+  border-top: 1px solid #bbb;
+  height: 0;
+  padding: 0;
+}
+
+/* line 434, ../scss/vendor/_handsontable.scss */
+.htContextMenu table tbody tr td.htDisabled {
+  color: #999;
+}
+
+/* line 438, ../scss/vendor/_handsontable.scss */
+.htContextMenu table tbody tr td.htDisabled:hover {
+  background: white;
+  color: #999;
+  cursor: default;
+}
+
+/* line 444, ../scss/vendor/_handsontable.scss */
+.handsontable td.htSearchResult {
+  background: #fcedd9;
+  color: #583707;
+}
+
+/*WalkontableDebugOverlay*/
+/* line 451, ../scss/vendor/_handsontable.scss */
+.wtDebugHidden {
+  display: none;
+}
+
+/* line 455, ../scss/vendor/_handsontable.scss */
+.wtDebugVisible {
+  display: block;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: wtFadeInFromNone;
+  animation-duration: 0.5s;
+  animation-name: wtFadeInFromNone;
+}
+
+@keyframes wtFadeInFromNone {
+  /* line 464, ../scss/vendor/_handsontable.scss */
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  /* line 469, ../scss/vendor/_handsontable.scss */
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  /* line 474, ../scss/vendor/_handsontable.scss */
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes wtFadeInFromNone {
+  /* line 481, ../scss/vendor/_handsontable.scss */
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  /* line 486, ../scss/vendor/_handsontable.scss */
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  /* line 491, ../scss/vendor/_handsontable.scss */
+  100% {
+    display: block;
+    opacity: 1;
+  }
 }

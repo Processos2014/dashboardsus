@@ -21,7 +21,7 @@ class GenericView(View):
     '''
     Generic view to render all system requests
     '''
-    def render_to_json(request, template, context_data):
+    def render_to_json(self, request, template, context_data):
         '''
         Dumps json objects to string template
         '''
@@ -63,7 +63,7 @@ class GenericView(View):
 
             return None
 
-    def load_json(request):
+    def load_json(self, request):
         '''
         Load json objects from request
         '''
@@ -78,7 +78,7 @@ class GenericView(View):
 
         if request.is_ajax():
 
-            return render_to_json(request, self.get_template_name(request), self.get_context_data(request))
+            return self.render_to_json(request, self.get_template_name(request), self.get_context_data(request))
         else:
             context_data = self.get_context_data(request)
 
