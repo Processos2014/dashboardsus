@@ -359,3 +359,24 @@ function custom_data_save_data_table(form){
 
     return data;
   }
+
+function custom_data_save_data_table_consultas(form){
+    var data =                  $('#data_table').data('handsontable').getData();
+    var residentes_fora_da_area_de_abrangencia =  $('#residentes_fora_da_area_de_abrangencia').val();
+    var area =                  $('#area').val();
+    var ano =                   $('#ano').val();
+    var mes =                   $('#mes').val();
+    var csrfmiddlewaretoken =   $('input[name=csrfmiddlewaretoken]').val();
+
+    var data = {
+        'data' : JSON.stringify(data),
+        'residentes_fora_da_area_de_abrangencia' : JSON.stringify(residentes_fora_da_area_de_abrangencia),
+        'area' : JSON.stringify(area),
+        'ano' : JSON.stringify(ano),
+        'mes' : JSON.stringify(mes),
+        'csrfmiddlewaretoken' : csrfmiddlewaretoken,
+    }
+
+    return data;
+  }
+

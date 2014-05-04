@@ -27,6 +27,7 @@ from dashboardsus.apps.core.models import (
 )
 
 class GUI(GenericView):
+
     def home(self, request):
         municipios = Municipio.objects.all()
         unidades = Unidade.objects.all()
@@ -38,7 +39,6 @@ class GUI(GenericView):
             municipio = request.GET['municipio']
         except Exception, e:
             municipio = None
-            print str(e)
         else:
             if municipio != "":
                 municipio = Municipio.objects.get(pk = municipio)
@@ -52,7 +52,6 @@ class GUI(GenericView):
             unidade = request.GET['unidade']
         except Exception, e:
             unidade = None
-            print str(e)
         else:
             if unidade != "":
                 unidade = Unidade.objects.get(pk = unidade)
@@ -66,7 +65,6 @@ class GUI(GenericView):
             area = request.GET['area']
         except Exception, e:
             area = None
-            print str(e)
         else:
             if area != "":
                 area = Area.objects.get(pk = area)
@@ -79,7 +77,6 @@ class GUI(GenericView):
             ano = request.GET['ano']
         except Exception, e:
             ano = None
-            print str(e)
         else:
             if ano != "":
                 relatorios_de_pacientes = relatorios_de_pacientes.filter(ano = ano)
@@ -91,7 +88,6 @@ class GUI(GenericView):
             mes = request.GET['mes']
         except Exception, e:
             mes = None
-            print str(e)
         else:
             if mes != "":
                 relatorios_de_pacientes = relatorios_de_pacientes.filter(mes = mes)
@@ -105,6 +101,27 @@ class GUI(GenericView):
         quantidade_area_abrangencia = 0
         dicionario_homens_faixa_etaria = []
         dicionario_mulheres_faixa_etaria = []
+        masculino_menor_que_um = 0
+        masculino_um_a_quatro = 0
+        masculino_cinco_a_seis = 0
+        masculino_sete_a_nove = 0
+        masculino_dez_a_quatorze = 0
+        masculino_quinze_a_dezenove = 0
+        masculino_vinte_a_trinta_e_nove = 0
+        masculino_quarenta_a_quarenta_e_nove = 0
+        masculino_cinquenta_a_cinquenta_e_nove = 0
+        masculino_maior_que_sessenta = 0
+
+        feminino_menor_que_um = 0
+        feminino_um_a_quatro = 0
+        feminino_cinco_a_seis = 0
+        feminino_sete_a_nove = 0
+        feminino_dez_a_quatorze = 0
+        feminino_quinze_a_dezenove = 0
+        feminino_vinte_a_trinta_e_nove = 0
+        feminino_quarenta_a_quarenta_e_nove = 0
+        feminino_cinquenta_a_cinquenta_e_nove = 0
+        feminino_maior_que_sessenta = 0
 
         for relatorio in relatorio_consultas_medicas:
             quantidade_area_abrangencia += (
@@ -149,28 +166,49 @@ class GUI(GenericView):
                 int(relatorio.feminino_cinquenta_a_cinquenta_e_nove) + \
                 int(relatorio.feminino_maior_que_sessenta)
             )
+            masculino_menor_que_um += int(relatorio.masculino_menor_que_um)
+            masculino_um_a_quatro += int(relatorio.masculino_um_a_quatro)
+            masculino_cinco_a_seis += int(relatorio.masculino_cinco_a_seis)
+            masculino_sete_a_nove += int(relatorio.masculino_sete_a_nove)
+            masculino_dez_a_quatorze += int(relatorio.masculino_dez_a_quatorze)
+            masculino_quinze_a_dezenove += int(relatorio.masculino_quinze_a_dezenove)
+            masculino_vinte_a_trinta_e_nove += int(relatorio.masculino_vinte_a_trinta_e_nove)
+            masculino_quarenta_a_quarenta_e_nove += int(relatorio.masculino_quarenta_a_quarenta_e_nove)
+            masculino_cinquenta_a_cinquenta_e_nove += int(relatorio.masculino_cinquenta_a_cinquenta_e_nove)
+            masculino_maior_que_sessenta += int(relatorio.masculino_maior_que_sessenta)
 
-            dicionario_homens_faixa_etaria.append(int(relatorio.masculino_menor_que_um))
-            dicionario_homens_faixa_etaria.append(int(relatorio.masculino_um_a_quatro))
-            dicionario_homens_faixa_etaria.append(int(relatorio.masculino_cinco_a_seis))
-            dicionario_homens_faixa_etaria.append(int(relatorio.masculino_sete_a_nove))
-            dicionario_homens_faixa_etaria.append(int(relatorio.masculino_dez_a_quatorze))
-            dicionario_homens_faixa_etaria.append(int(relatorio.masculino_quinze_a_dezenove))
-            dicionario_homens_faixa_etaria.append(int(relatorio.masculino_vinte_a_trinta_e_nove))
-            dicionario_homens_faixa_etaria.append(int(relatorio.masculino_quarenta_a_quarenta_e_nove))
-            dicionario_homens_faixa_etaria.append(int(relatorio.masculino_cinquenta_a_cinquenta_e_nove))
-            dicionario_homens_faixa_etaria.append(int(relatorio.masculino_maior_que_sessenta))
+            feminino_menor_que_um += int(relatorio.feminino_menor_que_um)
+            feminino_um_a_quatro += int(relatorio.feminino_um_a_quatro)
+            feminino_cinco_a_seis += int(relatorio.feminino_cinco_a_seis)
+            feminino_sete_a_nove += int(relatorio.feminino_sete_a_nove)
+            feminino_dez_a_quatorze += int(relatorio.feminino_dez_a_quatorze)
+            feminino_quinze_a_dezenove += int(relatorio.feminino_quinze_a_dezenove)
+            feminino_vinte_a_trinta_e_nove += int(relatorio.feminino_vinte_a_trinta_e_nove)
+            feminino_quarenta_a_quarenta_e_nove += int(relatorio.feminino_quarenta_a_quarenta_e_nove)
+            feminino_cinquenta_a_cinquenta_e_nove += int(relatorio.feminino_cinquenta_a_cinquenta_e_nove)
+            feminino_maior_que_sessenta += int(relatorio.feminino_maior_que_sessenta)
 
-            dicionario_mulheres_faixa_etaria.append(int(relatorio.feminino_menor_que_um))
-            dicionario_mulheres_faixa_etaria.append(int(relatorio.feminino_um_a_quatro))
-            dicionario_mulheres_faixa_etaria.append(int(relatorio.feminino_cinco_a_seis))
-            dicionario_mulheres_faixa_etaria.append(int(relatorio.feminino_sete_a_nove))
-            dicionario_mulheres_faixa_etaria.append(int(relatorio.feminino_dez_a_quatorze))
-            dicionario_mulheres_faixa_etaria.append(int(relatorio.feminino_quinze_a_dezenove))
-            dicionario_mulheres_faixa_etaria.append(int(relatorio.feminino_vinte_a_trinta_e_nove))
-            dicionario_mulheres_faixa_etaria.append(int(relatorio.feminino_quarenta_a_quarenta_e_nove))
-            dicionario_mulheres_faixa_etaria.append(int(relatorio.feminino_cinquenta_a_cinquenta_e_nove))
-            dicionario_mulheres_faixa_etaria.append(int(relatorio.feminino_maior_que_sessenta))
+        dicionario_homens_faixa_etaria.append(masculino_menor_que_um)
+        dicionario_homens_faixa_etaria.append(masculino_um_a_quatro)
+        dicionario_homens_faixa_etaria.append(masculino_cinco_a_seis)
+        dicionario_homens_faixa_etaria.append(masculino_sete_a_nove)
+        dicionario_homens_faixa_etaria.append(masculino_dez_a_quatorze)
+        dicionario_homens_faixa_etaria.append(masculino_quinze_a_dezenove)
+        dicionario_homens_faixa_etaria.append(masculino_vinte_a_trinta_e_nove)
+        dicionario_homens_faixa_etaria.append(masculino_quarenta_a_quarenta_e_nove)
+        dicionario_homens_faixa_etaria.append(masculino_cinquenta_a_cinquenta_e_nove)
+        dicionario_homens_faixa_etaria.append(masculino_maior_que_sessenta)
+
+        dicionario_mulheres_faixa_etaria.append(feminino_menor_que_um)
+        dicionario_mulheres_faixa_etaria.append(feminino_um_a_quatro)
+        dicionario_mulheres_faixa_etaria.append(feminino_cinco_a_seis)
+        dicionario_mulheres_faixa_etaria.append(feminino_sete_a_nove)
+        dicionario_mulheres_faixa_etaria.append(feminino_dez_a_quatorze)
+        dicionario_mulheres_faixa_etaria.append(feminino_quinze_a_dezenove)
+        dicionario_mulheres_faixa_etaria.append(feminino_vinte_a_trinta_e_nove)
+        dicionario_mulheres_faixa_etaria.append(feminino_quarenta_a_quarenta_e_nove)
+        dicionario_mulheres_faixa_etaria.append(feminino_cinquenta_a_cinquenta_e_nove)
+        dicionario_mulheres_faixa_etaria.append(feminino_maior_que_sessenta)
 
         return {
             'template' : {
@@ -200,7 +238,6 @@ class GUI(GenericView):
                 'pacientes' : pacientes,
             }
         }
-
 
     def adicionar_pacientes(self, request):
         data = None
@@ -415,6 +452,206 @@ class GUI(GenericView):
         try:
             pk = self.kwargs['pk']
             Pacientes.objects.get(pk = pk).delete()
+        except Exception, e:
+            data = {
+                'leftover' : {
+                    'alert-error' : 'Ocorreu algum erro (erro %s).' % str(e),
+                }
+            }
+        else:
+            data = {
+                'leftover' : {
+                    'alert-success' : 'Deletado com sucesso!',
+                }
+            }
+        finally:
+            return data
+
+    def consultas(self, request):
+        consultas = ConsultasMedicas.objects.all()
+
+
+        return {
+            'template' : {
+                'consultas' : consultas,
+            }
+        }
+
+    def adicionar_consultas(self, request):
+        data = None
+
+        if request.method == 'POST':
+            try:
+                data = self.load_json(request.POST['data'])
+                area = self.load_json(request.POST['area'])
+                mes = self.load_json(request.POST['mes'])
+                ano = self.load_json(request.POST['ano'])
+                residentes_fora_da_area_de_abrangencia = self.load_json(request.POST['residentes_fora_da_area_de_abrangencia'])
+            except Exception, e:
+                data = {
+                    'leftover' : {
+                        'alert-error' : 'Não foi possível completar a solicitação!',
+                    }
+                }
+            else:
+                try:
+                    print data
+                    consultas = ConsultasMedicas()
+                    consultas.area = Area.objects.get(pk = area)
+                    consultas.mes = mes
+                    consultas.ano = ano
+                    consultas.todos = residentes_fora_da_area_de_abrangencia
+
+                    consultas.menor_que_um = data[0][0]
+                    consultas.um_a_quatro = data[1][0]
+                    consultas.cinco_a_nove = data[2][0]
+                    consultas.dez_a_quatorze = data[3][0]
+                    consultas.quinze_a_dezenove = data[4][0]
+                    consultas.vinte_a_trinta_e_nove = data[5][0]
+                    consultas.quarenta_a_quarenta_e_nove = data[6][0]
+                    consultas.cinquenta_a_cinquenta_e_nove = data[7][0]
+                    consultas.maior_que_sessenta = data[8][0]
+
+                    consultas.save()
+
+                except Exception, e:
+                    data = {
+                        'leftover' : {
+                            'alert-error' : 'Não foi possível completar a solicitação (error: %s)' % str(e),
+                        }
+                    }
+                else:
+                    data = {
+                        'leftover' : {
+                            'alert-success' : 'Salvo com sucesso!',
+                            'redirect' : '/consultas/',
+                        }
+                    }
+
+            finally:
+                return data
+
+        else:
+            areas = Area.objects.all()
+
+            return {
+                'template' : {
+                    'areas' : areas,
+                }
+            }
+
+    def editar_consultas(self, request):
+        data = None
+
+        if request.method == 'POST':
+            try:
+                pk = self.kwargs['pk']
+                data = self.load_json(request.POST['data'])
+                area = self.load_json(request.POST['area'])
+                mes = self.load_json(request.POST['mes'])
+                ano = self.load_json(request.POST['ano'])
+                residentes_fora_da_area_de_abrangencia = self.load_json(request.POST['residentes_fora_da_area_de_abrangencia'])
+
+                consultas = ConsultasMedicas.objects.get(pk = pk)
+            except Exception, e:
+                data = {
+                    'leftover' : {
+                        'alert-error' : 'Não foi possível completar a solicitação!',
+                    }
+                }
+            else:
+                try:
+                    consultas.area = Area.objects.get(pk = area)
+                    consultas.mes = mes
+                    consultas.ano = ano
+                    consultas.todos = residentes_fora_da_area_de_abrangencia
+
+                    consultas.menor_que_um = data[0][0]
+                    consultas.um_a_quatro = data[1][0]
+                    consultas.cinco_a_nove = data[2][0]
+                    consultas.dez_a_quatorze = data[3][0]
+                    consultas.quinze_a_dezenove = data[4][0]
+                    consultas.vinte_a_trinta_e_nove = data[5][0]
+                    consultas.quarenta_a_quarenta_e_nove = data[6][0]
+                    consultas.cinquenta_a_cinquenta_e_nove = data[7][0]
+                    consultas.maior_que_sessenta = data[8][0]
+                    consultas.save()
+
+                except Exception, e:
+                    data = {
+                        'leftover' : {
+                            'alert-error' : 'Não foi possível completar a solicitação (error: %s)' % str(e),
+                        }
+                    }
+                else:
+                    data = {
+                        'leftover' : {
+                            'alert-success' : 'Salvo com sucesso!',
+                            'redirect' : '/consultas/',
+                        }
+                    }
+
+            finally:
+                return data
+        else:
+            try:
+                pk = self.kwargs['pk']
+                consultas = ConsultasMedicas.objects.get(pk = pk)
+            except Exception, e:
+                data = {
+                    'leftover' : {
+                        'alert-error' : 'Ocorreu algum erro (erro %s).' % str(e),
+                    }
+                }
+            else:
+                areas = Area.objects.all()
+
+                data_table = []
+
+                row = []
+                row.append(consultas.menor_que_um)
+                data_table.append(row)
+                row = []
+                row.append(consultas.um_a_quatro)
+                data_table.append(row)
+                row = []
+                row.append(consultas.cinco_a_nove)
+                data_table.append(row)
+                row = []
+                row.append(consultas.dez_a_quatorze)
+                data_table.append(row)
+                row = []
+                row.append(consultas.quinze_a_dezenove)
+                data_table.append(row)
+                row = []
+                row.append(consultas.vinte_a_trinta_e_nove)
+                data_table.append(row)
+                row = []
+                row.append(consultas.quarenta_a_quarenta_e_nove)
+                data_table.append(row)
+                row = []
+                row.append(consultas.cinquenta_a_cinquenta_e_nove)
+                data_table.append(row)
+                row = []
+                row.append(consultas.maior_que_sessenta)
+                data_table.append(row)
+
+                data = {
+                    'template' : {
+                        'areas' : areas,
+                        'consultas' : consultas,
+                        'data_table' : data_table,
+                    }
+                }
+            finally:
+                return data
+
+    def deletar_consultas(self, request):
+        data = None
+
+        try:
+            pk = self.kwargs['pk']
+            ConsultasMedicas.objects.get(pk = pk).delete()
         except Exception, e:
             data = {
                 'leftover' : {
