@@ -433,3 +433,40 @@
 [25/Apr/2014 15:58:21] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
 [04/May/2014 15:10:36] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
 [04/May/2014 15:10:58] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[04/May/2014 17:36:14] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:20:18] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:20:25] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: accounts/accounts/logon.html
+[05/May/2014 14:20:25] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: accounts/accounts.html
+[05/May/2014 14:20:25] INFO [dashboardsus.apps.core.views:172] Template loaded: accounts/logon.html
+[05/May/2014 14:21:45] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:21:50] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:21:54] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:25:52] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:25:56] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: accounts/accounts/logon.html
+[05/May/2014 14:25:56] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: accounts/accounts.html
+[05/May/2014 14:25:56] INFO [dashboardsus.apps.core.views:172] Template loaded: accounts/logon.html
+[05/May/2014 14:28:20] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: accounts/accounts/logon.html
+[05/May/2014 14:28:20] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: accounts/accounts.html
+[05/May/2014 14:28:20] INFO [dashboardsus.apps.core.views:172] Template loaded: accounts/logon.html
+[05/May/2014 14:31:44] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: accounts/accounts/logon.html
+[05/May/2014 14:31:44] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: accounts/accounts.html
+[05/May/2014 14:31:44] INFO [dashboardsus.apps.core.views:172] Template loaded: accounts/logon.html
+[05/May/2014 14:34:45] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:35:20] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:35:40] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: gui/4124124.html
+[05/May/2014 14:35:40] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: gui.html
+[05/May/2014 14:35:40] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: gui/4124124.html
+[05/May/2014 14:35:40] INFO [dashboardsus.apps.core.views:176] Not found available templates, loading 404 template!
+[05/May/2014 14:35:54] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:36:20] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:37:05] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: accounts/accounts/logon.html
+[05/May/2014 14:37:05] ERROR [dashboardsus.apps.core.views:170] Template not found! Raised: accounts/accounts.html
+[05/May/2014 14:37:05] INFO [dashboardsus.apps.core.views:172] Template loaded: accounts/logon.html
+[05/May/2014 14:38:08] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:38:08] ERROR [dashboardsus.apps.accounts.views:82] Required fields aren't defined! Raised: "'username'"
+[05/May/2014 14:41:20] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:41:40] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:44:32] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:45:17] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:45:32] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
+[05/May/2014 14:46:09] INFO [dashboardsus.apps.core.views:172] Template loaded: gui/home.html
